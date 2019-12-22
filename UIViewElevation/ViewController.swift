@@ -24,6 +24,7 @@ class ViewController: UIViewController {
             let mdcElevation = ShadowElevation(cgElevation)
             self.mdcCard.setShadowElevation(mdcElevation, for: .normal)
             self.cardView.setShadowElevation(cgElevation)
+            self.cardView.setShadowColor(key: UIColor.black.cgColor, ambient: UIColor.orange.cgColor)
         }
     }
 
