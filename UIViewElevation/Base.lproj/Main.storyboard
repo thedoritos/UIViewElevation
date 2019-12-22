@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,78 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIViewElevation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material Components" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnB-Oc-OJP" userLabel="MDC Label">
+                                <rect key="frame" x="366" y="64" width="164" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fic-1v-CHa" customClass="MDCCard">
+                                <rect key="frame" x="328" y="121" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Ebg-VL-bXI"/>
+                                    <constraint firstAttribute="width" constant="240" id="cSK-Po-gXH"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIView+Elevation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc2-oU-Xhy" userLabel="UIView Label">
+                                <rect key="frame" x="531" y="64" width="133" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuQ-gK-x5s">
+                                <rect key="frame" x="477.5" y="121" width="240" height="128"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="6ex-YI-unI"/>
+                                    <constraint firstAttribute="width" constant="240" id="vzV-4b-Y5a"/>
+                                </constraints>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ylz-ae-sIg" userLabel="Elevation Switch">
+                                <rect key="frame" x="329.5" y="350" width="237" height="32"/>
+                                <segments>
+                                    <segment title="0"/>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="5"/>
+                                    <segment title="8"/>
+                                    <segment title="13"/>
+                                </segments>
+                                <connections>
+                                    <action selector="elevationSwitchValueChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="w6n-mf-R8C"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ylz-ae-sIg" secondAttribute="bottom" constant="12" id="1MB-Pw-JcS"/>
+                            <constraint firstItem="ylz-ae-sIg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Gs-XX-2Nz"/>
+                            <constraint firstItem="tc2-oU-Xhy" firstAttribute="firstBaseline" secondItem="MnB-Oc-OJP" secondAttribute="firstBaseline" id="AMt-9M-jFT"/>
+                            <constraint firstItem="MnB-Oc-OJP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="BBg-bE-L59"/>
+                            <constraint firstItem="fic-1v-CHa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F9X-43-fOV"/>
+                            <constraint firstItem="MnB-Oc-OJP" firstAttribute="centerX" secondItem="fic-1v-CHa" secondAttribute="centerX" id="W9c-sF-veM"/>
+                            <constraint firstItem="KuQ-gK-x5s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="4/3" id="ZWu-om-fyq"/>
+                            <constraint firstItem="fic-1v-CHa" firstAttribute="top" secondItem="MnB-Oc-OJP" secondAttribute="bottom" constant="36" id="oG7-Za-Y24"/>
+                            <constraint firstItem="tc2-oU-Xhy" firstAttribute="centerX" secondItem="KuQ-gK-x5s" secondAttribute="centerX" id="rcW-YJ-pV3"/>
+                            <constraint firstItem="KuQ-gK-x5s" firstAttribute="top" secondItem="tc2-oU-Xhy" secondAttribute="bottom" constant="36" id="tWS-mC-HyD"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mdcCard" destination="fic-1v-CHa" id="io9-8g-Dvh"/>
+                        <outlet property="uiviewCard" destination="KuQ-gK-x5s" id="rnG-dS-dLt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
         </scene>
     </scenes>
 </document>
