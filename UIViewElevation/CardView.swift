@@ -17,10 +17,12 @@ class CardView: UIView {
         let cornerRadius: CGFloat = 4
         self.layer.cornerRadius = cornerRadius
 
+        let hasShadow = elevation > 0
+
         self.layer.shadowColor = UIColor.black.cgColor
         self.layer.shadowRadius = elevation
         self.layer.shadowOffset = CGSize(width: 0, height: elevation)
-        self.layer.shadowOpacity = 0.33
+        self.layer.shadowOpacity = hasShadow ? 0.33 : 0.0
 
         let ambientShadowLayer = self.ambientShadowLayer ?? { (view: UIView) -> CALayer in
             let superLayer = view.layer
@@ -52,6 +54,6 @@ class CardView: UIView {
         ambientShadowLayer.shadowColor = UIColor.black.cgColor
         ambientShadowLayer.shadowRadius = elevation
         ambientShadowLayer.shadowOffset = .zero
-        ambientShadowLayer.shadowOpacity = 0.11
+        ambientShadowLayer.shadowOpacity = hasShadow ? 0.11 : 0
     }
 }
