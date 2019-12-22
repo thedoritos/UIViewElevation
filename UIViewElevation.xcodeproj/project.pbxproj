@@ -14,6 +14,7 @@
 		76A384BF23AF384E002AA72D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A384BD23AF384E002AA72D /* Main.storyboard */; };
 		76A384C123AF3851002AA72D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A384C023AF3851002AA72D /* Assets.xcassets */; };
 		76A384C423AF3851002AA72D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A384C223AF3851002AA72D /* LaunchScreen.storyboard */; };
+		76A384CC23AF55F3002AA72D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A384CB23AF55F3002AA72D /* CardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		76A384C023AF3851002AA72D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76A384C323AF3851002AA72D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76A384C523AF3851002AA72D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A384CB23AF55F3002AA72D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DA5F52CAD8BE6D71ECCBBB0D /* Pods-UIViewElevation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIViewElevation.debug.xcconfig"; path = "Target Support Files/Pods-UIViewElevation/Pods-UIViewElevation.debug.xcconfig"; sourceTree = "<group>"; };
 		E594407F02DF40E9B963BB41 /* Pods-UIViewElevation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UIViewElevation.release.xcconfig"; path = "Target Support Files/Pods-UIViewElevation/Pods-UIViewElevation.release.xcconfig"; sourceTree = "<group>"; };
 		FD840AE148D51A04739EC3EA /* Pods_UIViewElevation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UIViewElevation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +72,7 @@
 				76A384C023AF3851002AA72D /* Assets.xcassets */,
 				76A384C223AF3851002AA72D /* LaunchScreen.storyboard */,
 				76A384C523AF3851002AA72D /* Info.plist */,
+				76A384CB23AF55F3002AA72D /* CardView.swift */,
 			);
 			path = UIViewElevation;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A384CC23AF55F3002AA72D /* CardView.swift in Sources */,
 				76A384BC23AF384E002AA72D /* ViewController.swift in Sources */,
 				76A384B823AF384E002AA72D /* AppDelegate.swift in Sources */,
 				76A384BA23AF384E002AA72D /* SceneDelegate.swift in Sources */,

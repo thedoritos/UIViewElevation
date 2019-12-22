@@ -11,7 +11,7 @@ import MaterialComponents
 
 class ViewController: UIViewController {
     @IBOutlet weak var mdcCard: MDCCard!
-    @IBOutlet weak var uiviewCard: UIView!
+    @IBOutlet weak var cardView: CardView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,7 @@ class ViewController: UIViewController {
         didSet {
             let mdcElevation = ShadowElevation(CGFloat(self.elevation))
             self.mdcCard.setShadowElevation(mdcElevation, for: .normal)
+            self.cardView.setShadowElevation(self.elevation)
         }
     }
 

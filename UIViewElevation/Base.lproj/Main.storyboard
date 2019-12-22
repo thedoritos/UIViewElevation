@@ -16,26 +16,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material Components" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MnB-Oc-OJP" userLabel="MDC Label">
-                                <rect key="frame" x="366" y="64" width="164" height="21"/>
+                                <rect key="frame" x="216.5" y="64" width="164" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fic-1v-CHa" customClass="MDCCard">
-                                <rect key="frame" x="328" y="121" width="240" height="128"/>
+                                <rect key="frame" x="178.5" y="121" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="Ebg-VL-bXI"/>
                                     <constraint firstAttribute="width" constant="240" id="cSK-Po-gXH"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIView+Elevation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc2-oU-Xhy" userLabel="UIView Label">
-                                <rect key="frame" x="531" y="64" width="133" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UIView + Shadow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tc2-oU-Xhy" userLabel="UIView Label">
+                                <rect key="frame" x="530.5" y="64" width="134" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuQ-gK-x5s">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KuQ-gK-x5s" customClass="CardView" customModule="UIViewElevation" customModuleProvider="target">
                                 <rect key="frame" x="477.5" y="121" width="240" height="128"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -65,7 +65,7 @@
                             <constraint firstItem="ylz-ae-sIg" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6Gs-XX-2Nz"/>
                             <constraint firstItem="tc2-oU-Xhy" firstAttribute="firstBaseline" secondItem="MnB-Oc-OJP" secondAttribute="firstBaseline" id="AMt-9M-jFT"/>
                             <constraint firstItem="MnB-Oc-OJP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="BBg-bE-L59"/>
-                            <constraint firstItem="fic-1v-CHa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="F9X-43-fOV"/>
+                            <constraint firstItem="fic-1v-CHa" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="2/3" id="F9X-43-fOV"/>
                             <constraint firstItem="MnB-Oc-OJP" firstAttribute="centerX" secondItem="fic-1v-CHa" secondAttribute="centerX" id="W9c-sF-veM"/>
                             <constraint firstItem="KuQ-gK-x5s" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="4/3" id="ZWu-om-fyq"/>
                             <constraint firstItem="fic-1v-CHa" firstAttribute="top" secondItem="MnB-Oc-OJP" secondAttribute="bottom" constant="36" id="oG7-Za-Y24"/>
@@ -75,8 +75,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="cardView" destination="KuQ-gK-x5s" id="NPk-aC-BfM"/>
                         <outlet property="mdcCard" destination="fic-1v-CHa" id="io9-8g-Dvh"/>
-                        <outlet property="uiviewCard" destination="KuQ-gK-x5s" id="rnG-dS-dLt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
