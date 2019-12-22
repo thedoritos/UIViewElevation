@@ -20,9 +20,10 @@ class ViewController: UIViewController {
 
     var elevation: Float = 0.0 {
         didSet {
-            let mdcElevation = ShadowElevation(CGFloat(self.elevation))
+            let cgElevation = CGFloat(self.elevation)
+            let mdcElevation = ShadowElevation(cgElevation)
             self.mdcCard.setShadowElevation(mdcElevation, for: .normal)
-            self.cardView.setShadowElevation(self.elevation)
+            self.cardView.setShadowElevation(cgElevation)
         }
     }
 
